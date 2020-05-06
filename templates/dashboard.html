@@ -1,0 +1,115 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div class="row">
+
+    <div class="col-xl-4 col-md-4 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Station ID</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{configs.camera.station_id}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-camera fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-md-4 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Project name:</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{configs.project.name}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-file-signature fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-4 col-md-4 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Project version:</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{configs.project.version}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-code-branch fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xl-12 col-md-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Configurations:</h6>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-4">
+                        <h5>Camera:</h5>
+                        <p>
+                            <b>station (id):</b> {{configs.camera.station_id}}<br/>
+                            <b>show_image:</b> {{configs.camera.show_image}}<br/>
+                            <b>resize_image:</b> {{configs.camera.resize_image}}<br/>
+                            <b>width:</b> {{configs.camera.width}}<br/>
+                            <b>height:</b> {{configs.camera.height}}<br/>
+                            <b>fps:</b> {{configs.camera.fps}}
+                        </p>
+                    </div>
+
+                    <div class="col-xl-4 col-md-4 mb-4">
+                        <h5>Communication:</h5>
+                        <p>
+                            <b>port:</b> {{configs.communication.port}}<br/>
+                            <b>baudarate:</b> {{configs.communication.baudrate}}<br/>
+                            <b>timeout:</b> {{configs.communication.timeout}}<br/>
+                            <b>preamble:</b> {{configs.communication.preamble}}</p>
+                    </div>
+
+                    <div class="col-xl-4 col-md-4 mb-4">
+                        <h5>Wifi:</h5>
+                        <p>
+                            <b>name: </b> {{configs.wifi.name}}
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr/>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="text-center">
+                            <a href="/download" class="btn btn-primary">
+                                <i class="fas fa-download"></i> Export
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

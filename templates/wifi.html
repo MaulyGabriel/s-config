@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                Wifi (Access Point)
+            </div>
+            <div class="card-body">
+
+                <form action="/wifi" method="POST">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5>Configuration</h5>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <input name="id" id="id" type="text" value="{{configs.wifi.id}}" hidden required="True">
+
+                        <div class="col-lg-6">
+                            <label for="name">Name:</label>
+                            <input name="name" id="name" type="text" value="{{configs.wifi.name}}"
+                                   class="form-control" required="True">
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label for="pass">Password:</label>
+                            <input name="password" id="pass" type="text" value="{{configs.wifi.password}}"
+                                   class="form-control" required="True">
+                        </div>
+
+                    </div>
+
+                    <br/>
+
+                    <p class="text-center">
+                        <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

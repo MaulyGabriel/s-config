@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold .text-gray-100">Reboot System</h6>
+    </div>
+    <div class="card-body">
+        <h4 class="text-center">Do you really want to restart the system? Your connection will be lost</h4>
+
+        <br/>
+
+        <p class="text-center">
+            <a href="/dashboard.html" class="btn btn-secondary">No</a>
+            <a href="/reboot_system" class="btn btn-warning">Yes</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
