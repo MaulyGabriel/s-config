@@ -24,7 +24,7 @@ app.secret_key = os.urandom(97)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-db = DataBase(data_base='config.db')
+db = DataBase(data_base='/home/pi/prod/s-config/config.db')
 
 cameraController = CameraController(db=db)
 communicationController = CommunicationController(db=db)

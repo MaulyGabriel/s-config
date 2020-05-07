@@ -10,5 +10,6 @@ class Camera:
         self.fps = fps
 
     def __repr__(self):
-        return '<Camera> {} {}x{}'.format(self.station_id, self.width, self.height)
+        return '<Camera> {} ({}x{}) FPS:{} SIZE:{}'.format(self.station_id, self.width, self.height, self.fps, self.resize_image)
+    
 
